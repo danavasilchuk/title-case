@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Form Template</title>
+     <title>Title Case</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/forms.css">
   <style>
-    #output{
-        border-radius:5px;
-        min-height:40px;
-        border:1px solid black;
-        margin:auto;
-        width:50%;
-        font-size:x-large;
-    }
+        #output{
+            border-radius: 5px;
+            min-height: 40px;
+            border: 1px solid black;
+            margin:auto;
+            width: 50%;
+            font-size: x-large;
+        }
   </style>
  </head>
  <body>
@@ -30,14 +30,13 @@
      </header>
      
    <main class="wrapper">
- 
+ <p><em>Welcome to the Title Case webpage! Created by Dana Vasilchuk, a professional and versatile form template that showcases a wide range of form elements and meticulously designed styles. Its user-friendly interface makes data input a breeze, while the automatic title case conversion enhances the overall user experience. The webpage boasts a clean and attractive layout with easy-to-navigate features, ensuring smooth access on various devices. This project not only highlights Dana's technical skills in web development but also underscores her attention to detail and dedication to creating seamless user experiences. With a strong focus on usability and aesthetics, the Title Case webpage sets the perfect foundation for form-related assignments and future projects. </em></p>
     <h2 class="subheader">Place form code below:</h2>
-    <div id="output">Output goes here</div>
+    <div id="output"> Output Goes Here </div>
     <form method="post" action="" class="main-form">
       <div>
-        <label for="input">input</label><br>
-        <input type="text" name="input" id="input" placeholder="input" required
-        autofocus>
+        <label for="input">Input:</label><br>
+        <input type="text" name="input" id="input" placeholder="input" required autofocus> 
       </div>
       <div>
         <input type="submit" id="submit">
@@ -48,27 +47,30 @@
     <p>The mobile navigation originates from <a href="https://www.w3schools.com/howto/howto_js_mobile_navbar.asp" target="_blank">W3Schools</a></p>
     <footer>
       <p><small>&copy; 2021-<span id="this-year"></span> by 
-          YOUR NAME HERE, All Rights Reserved ~ 
+          Dana Vasilchuk, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
      </p>
     </footer>
   </main>
-  <script src="js/main.js"></script> 
+  <script src="js/main.js"></script>   
   <script>
 
     function titleCase(str){
-      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+      return str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     }
-    const mySubmit = document.querySelector("#submit");
-    console.log(mySubmit);
-    mySubmit.addEventListener("click",function(ev){
-        ev.preventDefault();
-        const myInput = document.querySelector("#input");
-        const myOutput = document.querySelector("#output");
-        myOutput.innerHTML = titleCase(myInput.value);
-        //alert(myInput.value);
-    });
-  </script>  
+
+        const mySubmit = document.querySelector("#submit");
+        console.log(mySubmit);
+
+        mySubmit.addEventListener("click",function(ev){
+            ev.preventDefault();
+            const myInput = document.querySelector("#input");
+            const myOutput = document.querySelector("#output");
+            myOutput.innerHTML = titleCase(myInput.value);
+            //alert(myInput.value);
+        });
+        
+  </script>
  </body>
 </html>
